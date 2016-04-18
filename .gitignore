@@ -1,0 +1,8 @@
+/.idea
+/.grunt
+/node_modules
+/build
+/dist
+/doc
+.DS_Store
+*.iml
