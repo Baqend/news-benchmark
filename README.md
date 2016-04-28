@@ -30,7 +30,7 @@ An news object is referenced by an id. It contains a headline, short text, image
 
 Clone this repository, install the node modules (```npm install```) and start the http server with ```grunt```. To change the used provider edit the comments and the end of the ```index.html```.
 
-You can also use our live versions:
+You can also use our hosted versions:
 
 * [Baqend](http://news.app.baqend.com/v1/file/www/index.html)
 * [Parse](http://newsq.parseapp.com/)
