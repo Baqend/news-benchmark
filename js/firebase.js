@@ -16,12 +16,14 @@ firebase.initializeApp(config);
             firebase.database().ref('news/' + articleId).on('value', function (article) {
                 render(
                     streamId,
-                    Promise.resolve({
-                        tag: article.val().tag,
-                        date: article.val().date,
-                        img: article.val().img,
-                        headline: article.val().headline,
-                        short: article.val().short
+                    firebase.storage().ref('images/'+ article.val().img).getDownloadURL().then(function(url) {
+                        return {
+                            tag: article.val().tag,
+                            date: article.val().date,
+                            img: url,
+                            headline: article.val().headline,
+                            short: article.val().short
+                        };
                     })
                 );
             });
