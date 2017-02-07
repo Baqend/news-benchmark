@@ -1,13 +1,13 @@
-Parse.initialize("KcOmxezYu9FbY7qss2aIvhfwW89RTsY98mZn6LE9", "NftTH1LiZ1FSBBv8Gjk7lfacFSnP7l60bNid8IBv");
+Parse.initialize("9LwVbpuFds6zAGWaHVQeX5nXMuArPyPEP6rsabVH", "vMrAMxHt5eIfhdNfjpgxnooQ4FWDAKRv3W3LtNHL");
+Parse.serverURL = "https://parseapi.back4app.com";
 
-var streamQuery = new Parse.Query("Stream");
-var newsQuery = new Parse.Query("News");
-['pxWppj9niE', 'bruA5Oc3dY', '07xVFWkeML'].forEach(function(streamId) {
+['BybRny5uMV', 'HEpKr8wCIk', 'CgqcIGbLHa'].forEach(function(streamId) {
+  var streamQuery = new Parse.Query("Stream");
   streamQuery.get(streamId).then(function(stream) {
-    stream.get('news').forEach(function(news) {
-      render(stream.get('titel'), newsQuery.get(news.id).then(function(news) {
+    stream.get('news').forEach(function(newsId) {
+      var newsQuery = new Parse.Query("News");
+      render(stream.get('titel'), newsQuery.get(newsId).then(function(news) {
         return {
-          tag: news.get('tag'),
           date: news.get('date'),
           img: news.get('img'),
           headline: news.get('headline'),
@@ -17,5 +17,3 @@ var newsQuery = new Parse.Query("News");
     });
   });
 });
-
-

@@ -32,8 +32,8 @@ Clone this repository, install the node modules (```npm install```) and start th
 
 You can also use our hosted versions:
 
-* [Baqend](http://news.app.baqend.com/v1/file/www/index.html)
-* [Parse](http://newsq.parseapp.com/)
+* [Baqend](https://news.app.baqend.com/)
+* [Back4App (Parse-Server)](https://news.back4app.io)
 * [Azure Mobile Services](http://newsq.azurewebsites.net/)
 * [Apiomat](https://baqendnews.s3.amazonaws.com/apiomat/index.html) *Static files deployed on AWS S3*
 * [Kinvey](https://baqendnews.s3.amazonaws.com/kinvey/index.html) *Static files deployed on AWS S3*
