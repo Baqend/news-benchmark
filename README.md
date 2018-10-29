@@ -30,6 +30,12 @@ An news object is referenced by an id. It contains a headline, short text, image
 
 Clone this repository, install the node modules (```npm install```) and start the http server with ```grunt```. To change the used provider edit the comments and the end of the ```index.html```.
 
+You can deploy a predefined schema for this app via CLI. The schema is stored in ```baqend/schema```. If you want to intialize the app with predefined, data you can add ```init=true``` to the end of the address bar.
+
+### For local deployment
+* In ```js/baqend-insert.js``` change ```DB.User.login('*', '*')``` to your own credentials
+* In ```js/baqend.js``` change ```DB.connect('news');``` to ```DB.connect('http://localhost:8080/v1');```
+
 You can also use our hosted versions:
 
 * [Baqend](https://news.app.baqend.com/)
